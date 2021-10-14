@@ -25,6 +25,7 @@ def is_palindrome_recursive(s):
             return s[0] == s[-1] and is_palindrome(s[1:-1])
 
     return is_palindrome(to_chars(s))
+
 def is_palindrome_reverse(s):
     """ Assumes s is a str
     Returns True if the str is a palindrome; False otherwise"""

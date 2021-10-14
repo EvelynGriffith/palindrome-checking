@@ -2,7 +2,7 @@
 """Test case for palindrome file."""
 import typer
 from palindromechecker import __version__
-
+from palindromechecker import palindrome
 from typer.testing import CliRunner
 
 runner = CliRunner()
@@ -30,9 +30,15 @@ def test_short_not_palindrome_word_recursive():
 
 def test_short_palindrome_word_reverse():
     """Ensure that a short word of "civic" works correctly."""
-    # TODO: implement this test case using the provided example
+    # implement this test case using the provided example
+    word = "civic"
+    result = palindrome.is_palindrome_reverse(word)
+    assert result is True
 
 
 def test_short_not_palindrome_word_reverse():
     """Ensure that a short word of "taylor" does not work correctly."""
-    # TODO: implement this test case using the provided example
+    # implement this test case using the provided example
+    word = "civic"
+    result = palindrome.is_palindrome_reverse(word)
+    assert result is False
