@@ -30,36 +30,31 @@ def palindrome(
     word: str = typer.option(...),
     approach: PalindromeCheckerApproach = PalindromeCheckerApproach.recursive,
 ) -> None:
-    """Use iteration to perform primality testing on a number and run a profiling data collection if requested."""
+    """Use iteration to perform palindrome testing on a number and produce an output based on the output of that question."""
     # create a console for rich text output
     console = Console()
-    # create an empty primality_tuple
-    primality_tuple: Tuple[bool, List[int]]
+
     if approach.value == PalindromeCheckerApproach.recursive:
         is_palindrome_recursive = palindrome.is_palindrome_recursive(word)
     elif approach.value == PalindromeCheckerApproach.reverse:
         is_palindrome_reverse = palindrome.is_palindrome_reverse(word)
-        # Reference for more details:
-        # https://github.com/joerick/pyinstrument
-        # perform profiling on the execution of the primality test
-       
- was_prime_found = primality_tuple[0]
-    divisor_list = primality_tuple[1]
-    console.print(f":smile: Attempting to determine if {number} is a prime number!")
+
+    console.print(f":sparkles: Awesome, using the {approach} approach for palindrome checking!!")
     console.print()
     console.print(
-        f":sparkles: What divisors were found? {pretty_print_list(divisor_list)}"
+        f":letter: Going to check to see if the word {word} is a palindrome!"
     )
-    console.print(
-        f":sparkles: Was this a prime number? {human_readable_boolean(was_prime_found)}"
-    )
-    # display the results of the profiling if that option was requested
-    if profile:
+
+    if is_palindrome_recursive is True:
         console.print()
         console.print(
-            f":microscope: Here's profile data from performing primality testing on {number}!"
+            f":smile: Is this word a palindrome? Yes, it is!"
         )
-        profiler.print()
+    else:
+        console.print()
+        console.print(
+            f":frown: Is this word a palindrome? No, it is not!"
+        )
 # poetry run palindromechecker --help
 
 # Usage: palindromechecker [OPTIONS]
