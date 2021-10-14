@@ -30,7 +30,7 @@ def test_palindromechecker_recursive_is_not_palindrome():
     assert result.exit_code == 0
     assert "recursive" not in result.stdout
     assert "reverse" in result.stdout
-    assert "Yes, it is!" not in result.stdout
+    assert "No, it is not!" not in result.stdout
     assert "civic" not in result.stdout
 
 
@@ -52,5 +52,5 @@ def test_palindromechecker_reverse_is_not_palindrome():
     assert result.exit_code == 0
     assert "recursive" in result.stdout
     assert "reverse" not in result.stdout
-    assert "Yes, it is!" in result.stdout
+    assert "No, it is not!" in result.stdout
     assert "civic" in result.stdout
