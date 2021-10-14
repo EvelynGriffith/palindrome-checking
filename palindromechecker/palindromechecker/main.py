@@ -23,7 +23,7 @@ class PalindromeCheckerApproach(Str, Enum):
     recursive = "recursive"
     reverse = "reverse"
 
-# TODO: implement a command-line interface using typer that produces
+# implement a command-line interface using typer that produces
 # output like those examples included in the remainder of this file
 @cli.command()
 def palindrome(
