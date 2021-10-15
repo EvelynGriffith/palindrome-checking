@@ -28,7 +28,7 @@ class PalindromeCheckingApproach(str, Enum):
 # implement a command-line interface using typer that produces
 # output like those examples included in the remainder of this file
 @cli.command()
-def palindrome(
+def palindrome_one(
     word: str = typer.Option(...),
     approach: PalindromeCheckingApproach = PalindromeCheckingApproach.recursive,
 ) -> None:

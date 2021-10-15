@@ -12,7 +12,7 @@ def human_readable_boolean(answer: bool) -> str:
     # therefore it needed changed to have a passing build
     """ note that the build failed if we used != True instead of is not True """
     if answer is not True:
-        return "No"
+        return "No, it is not!"
     else:
-        return "Yes"
+        return "Yes, it is!"
 
