@@ -1,13 +1,18 @@
 # Add the required docstring and any required imports of objects
 """Test the functions in the main.py file."""
 import typer
-from palindromechecker import __version__
+
+cli = typer.Typer()
 
 from typer.testing import CliRunner
 
 runner = CliRunner()
 
-cli = typer.Typer()
+from palindromechecker import __version__
+# from palindromechecker import main
+
+from palindromechecker.main import cli
+
 
 # Reference:
 # https://typer.tiangolo.com/tutorial/testing/
@@ -30,8 +35,8 @@ def test_palindromechecker_recursive_is_not_palindrome():
     assert result.exit_code == 0
     assert "recursive" in result.stdout
     assert "reverse"  not in result.stdout
-    assert "No, it is not!" in result.stdout
-    assert "taylor" not in result.stdout
+    assert "No, it is not!" not in result.stdout
+    assert "taylor" in result.stdout
 
 
 def test_palindromechecker_reverse_is_palindrome():
@@ -52,5 +57,5 @@ def test_palindromechecker_reverse_is_not_palindrome():
     assert result.exit_code == 0
     assert "recursive" not in result.stdout
     assert "reverse" in result.stdout
-    assert "No, it is not!" in result.stdout
-    assert "taylor" not in result.stdout
+    assert "No, it is not!" not in result.stdout
+    assert "taylor" in result.stdout
