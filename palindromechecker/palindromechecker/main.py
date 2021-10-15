@@ -6,6 +6,7 @@ import typer
 
 from enum import Enum
 
+
 from rich.console import Console
 
 from palindromechecker import palindrome
@@ -18,7 +19,7 @@ cli = typer.Typer()
 # --> "recursive": use the recursive approach described on page 129
 # --> "reverse": use the recursive approach described on page 164
 
-class PalindromeCheckerApproach(str, Enum):
+class PalindromeCheckingApproach(str, Enum):
     """Define the name for the approach for performing palindrome checking."""
 
     recursive = "recursive"
@@ -28,24 +29,26 @@ class PalindromeCheckerApproach(str, Enum):
 # output like those examples included in the remainder of this file
 @cli.command()
 def palindrome(
-    word: str = typer.option(...),
-    approach: PalindromeCheckerApproach = PalindromeCheckerApproach.recursive,
+    word: str = typer.Option(...),
+    approach: PalindromeCheckingApproach = PalindromeCheckingApproach.recursive,
 ) -> None:
-    """Use iteration to perform palindrome testing on a number and produce an output based on the output of that question."""
+    """Use iteration to perform primality testing on a number and run a profiling data collection if requested."""
     # create a console for rich text output
     console = Console()
+    # create an empty primality_tuple
+    # primality_tuple: Tuple[bool, List[int]]
+    if approach.value == PalindromeCheckingApproach.recursive:
+        found_if_palindrome = palindrome.is_palindrome_recursive(word)
+    elif approach.value == PalindromeCheckingApproach.reverse:
+        found_if_palindrome = palindrome.is_palindrome_reverse(word)
 
-    if approach.value == PalindromeCheckerApproach.recursive:
-        is_palindrome_recursive = palindrome.is_palindrome_recursive(word)
-    elif approach.value == PalindromeCheckerApproach.reverse:
-        is_palindrome_reverse = palindrome.is_palindrome_reverse(word)
-
-    found_if_palindrome = 
+    found_if_palindrome = True
     console.print(f":sparkle: Awesome. using the {approach} for palindrome checking!")
     console.print()
     console.print(
         f":bookmark: Going to check to see if the word {word} is a palindrome!"
     )
+    console.print()
     console.print(
         f":satisfied: Is this word a palindrome? {util.human_readable_boolean(found_if_palindrome)}"
     )

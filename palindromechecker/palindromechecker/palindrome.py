@@ -5,6 +5,7 @@
 
 # implement to_chars(word: str) -> str:
 def to_chars(s):
+    """Identify the letters in the palindrome and making sure they are letters."""
         s = s.lower()
         letters = ''
         for c in s:
@@ -12,13 +13,14 @@ def to_chars(s):
                 letters = letters + c
         return letters
 
-def is_palindrome_recursive(s):
+def is_palindrome_recursive(s: str) -> bool:
     """ Assumes s is a str
     Returns True if letters in s form a palindrome; False
     otherwise. Non-letters and capitalization are ignored. """
 
     # implement def is_palindrome(word: str) -> bool:
     def is_palindrome(s):
+        """check if letters are a palindrome."""
         if len(s) <= 1:
             return True
         else:
@@ -26,9 +28,9 @@ def is_palindrome_recursive(s):
 
     return is_palindrome(to_chars(s))
 
-def is_palindrome_reverse(s):
+def is_palindrome_reverse(s: str) -> bool:
     """ Assumes s is a str
-    Returns True if the str is a palindrome; False otherwise"""
+    Returns True if the str is a palindrome; False otherwise."""
     x = to_chars(s).split('')
     temp = x[:]
     temp.reverse()
