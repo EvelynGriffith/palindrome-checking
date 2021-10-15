@@ -43,7 +43,7 @@ def palindrome_one(
         found_if_palindrome = palindrome.is_palindrome_reverse(word)
 
     found_if_palindrome = True
-    console.print(f":sparkle: Awesome. using the {approach} for palindrome checking!")
+    console.print(f":Sparkles: Awesome. using the {approach} for palindrome checking!")
     console.print()
     console.print(
         f":bookmark: Going to check to see if the word {word} is a palindrome!"
