@@ -4,12 +4,9 @@ import typer
 from palindromechecker import __version__
 
 from palindromechecker import util
+from importlib import reload
+reload(util)
 
-from typer.testing import CliRunner
-
-runner = CliRunner()
-
-cli = typer.Typer()
 """Test the Util function for bugs and correctness."""
 # Reference:
 # https://docs.pytest.org/en/6.2.x/
