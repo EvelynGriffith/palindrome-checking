@@ -1,4 +1,4 @@
-# TODO: Add the required docstring and any required imports of objects
+# Add the required docstring and any required imports of objects
 """Test the Util function for bugs and correctness."""
 # Reference:
 # https://docs.pytest.org/en/6.2.x/
