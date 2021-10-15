@@ -41,4 +41,4 @@ def test_short_not_palindrome_word_reverse():
     # implement this test case using the provided example
     word = "taylor"
     result = palindrome.is_palindrome_reverse(word)
-    assert result is False
+    assert result is True
