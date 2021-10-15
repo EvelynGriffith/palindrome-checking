@@ -1,5 +1,5 @@
 # TODO: Add the required docstring and any required imports of objects
-
+"""Test the Util function for bugs and correctness."""
 # Reference:
 # https://docs.pytest.org/en/6.2.x/
 
@@ -13,4 +13,7 @@ def test_human_readable_boolean_true():
 
 def test_human_readable_boolean_false():
     """Ensure that a human-readable false boolean works correctly."""
-    # TODO: add a test case that follows the provided example
+    # add a test case that follows the provided example
+    false_value = False
+    false_value_human_readable = util.get_human_readable_boolean(false_value)
+    assert false_value_human_readable == "No, it is not!"

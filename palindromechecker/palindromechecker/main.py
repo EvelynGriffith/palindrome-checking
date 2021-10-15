@@ -9,6 +9,7 @@ from enum import Enum
 from rich.console import Console
 
 from palindromechecker import palindrome
+from palindromechecker import util
 
 # create the command-line interface object with typer
 cli = typer.Typer()
@@ -17,7 +18,7 @@ cli = typer.Typer()
 # --> "recursive": use the recursive approach described on page 129
 # --> "reverse": use the recursive approach described on page 164
 
-class PalindromeCheckerApproach(Str, Enum):
+class PalindromeCheckerApproach(str, Enum):
     """Define the name for the approach for performing palindrome checking."""
 
     recursive = "recursive"
@@ -39,22 +40,15 @@ def palindrome(
     elif approach.value == PalindromeCheckerApproach.reverse:
         is_palindrome_reverse = palindrome.is_palindrome_reverse(word)
 
-    console.print(f":sparkles: Awesome, using the {approach} approach for palindrome checking!!")
+    found_if_palindrome = 
+    console.print(f":sparkle: Awesome. using the {approach} for palindrome checking!")
     console.print()
     console.print(
-        f":letter: Going to check to see if the word {word} is a palindrome!"
+        f":bookmark: Going to check to see if the word {word} is a palindrome!"
     )
-
-    if is_palindrome_recursive is True:
-        console.print()
-        console.print(
-            f":smile: Is this word a palindrome? Yes, it is!"
-        )
-    else:
-        console.print()
-        console.print(
-            f":frown: Is this word a palindrome? No, it is not!"
-        )
+    console.print(
+        f":satisfied: Is this word a palindrome? {util.human_readable_boolean(found_if_palindrome)}"
+    )
 # poetry run palindromechecker --help
 
 # Usage: palindromechecker [OPTIONS]

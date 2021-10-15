@@ -23,7 +23,7 @@ def test_short_palindrome_word_recursive():
 def test_short_not_palindrome_word_recursive():
     """Ensure that a short word of "taylor" does not work correctly."""
     # implement this test case using the provided example
-    word = "civic"
+    word = "taylor"
     result = palindrome.is_palindrome_recursive(word)
     assert result is False
 
@@ -39,6 +39,6 @@ def test_short_palindrome_word_reverse():
 def test_short_not_palindrome_word_reverse():
     """Ensure that a short word of "taylor" does not work correctly."""
     # implement this test case using the provided example
-    word = "civic"
+    word = "taylor"
     result = palindrome.is_palindrome_reverse(word)
     assert result is False
