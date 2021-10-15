@@ -5,6 +5,7 @@ from palindromechecker import __version__
 
 from palindromechecker import util
 from importlib import reload
+
 reload(util)
 
 """Test the Util function for bugs and correctness."""

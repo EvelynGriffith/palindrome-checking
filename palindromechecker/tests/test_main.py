@@ -9,6 +9,7 @@ from typer.testing import CliRunner
 runner = CliRunner()
 
 from palindromechecker import __version__
+
 # from palindromechecker import main
 
 from palindromechecker.main import cli
@@ -34,7 +35,7 @@ def test_palindromechecker_recursive_is_not_palindrome():
     result = runner.invoke(cli, ["--word", "taylor", "--approach", "recursive"])
     assert result.exit_code == 0
     assert "recursive" in result.stdout
-    assert "reverse"  not in result.stdout
+    assert "reverse" not in result.stdout
     assert "No, it is not!" not in result.stdout
     assert "taylor" in result.stdout
 
