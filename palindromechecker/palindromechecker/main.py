@@ -6,7 +6,6 @@ import typer
 
 from enum import Enum
 
-
 from rich.console import Console
 
 from palindromechecker import palindrome

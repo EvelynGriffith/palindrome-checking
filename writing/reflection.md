@@ -53,7 +53,18 @@ tests\test_main.py ....
 tests\test_palindrome.py ....
 tests\test_util.py ..
 
-=================================================================== 10 passed in 0.29s ==================================================================== 
+----------- coverage: platform win32, python 3.8.2-final-0 -----------
+Name                              Stmts   Miss  Cover   Missing
+---------------------------------------------------------------
+palindromechecker\__init__.py         1      0   100%
+palindromechecker\main.py            22      0   100%
+palindromechecker\palindrome.py      18      1    94%   30
+palindromechecker\util.py             5      0   100%
+---------------------------------------------------------------
+TOTAL                                46      1    98%
+
+
+=================================================================== 10 passed in 0.61s ==================================================================== 
 ```
 
 ## Source Code
