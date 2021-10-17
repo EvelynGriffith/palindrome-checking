@@ -1,6 +1,8 @@
 # Add the required docstring and any required imports of objects
 """Test the functions in the main.py file."""
 
+from palindromechecker.main import cli
+
 import typer
 
 cli = typer.Typer()
@@ -10,13 +12,8 @@ from typer.testing import CliRunner
 runner = CliRunner()
 
 # from palindromechecker import main
-
-from palindromechecker.main import cli
-
-
 # Reference:
 # https://typer.tiangolo.com/tutorial/testing/
-
 
 def test_palindromechecker_recursive_is_palindrome():
     """Ensure that the command-line interface works for recursive approach."""
