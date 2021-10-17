@@ -135,5 +135,5 @@ The greatest challenge I faced while doing this assignment actually came up afte
 
 ### Leveraging your response to the previous question, how did you overcome the challenge?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
-TODO: Provide a response to this question that is different from any previous answers.
+Provide a one-paragraph response that answers this question in your own words.
+Provide a response to this question that is different from any previous answers.
