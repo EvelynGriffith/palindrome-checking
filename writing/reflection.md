@@ -12,10 +12,28 @@ TODO: Provide the output for running `palindromechecker` in the following config
 
 - Recursive:
   - Input `word` is a palindrome
-  - Input `word` is not a palindrome
+
+```
+✨ Awesome. using the recursive for palindrome checking!
+
+🔖 Going to check to see if the word civic is a palindrome!
+
+😆 Is this word a palindrome? Yes, it is!
+```
+
+- Input `word` is not a palindrome
 
 - Reverse:
   - Input `word` is a palindrome
+
+```
+✨ Awesome. using the reverse for palindrome checking!
+
+🔖 Going to check to see if the word civic is a palindrome!
+
+😆 Is this word a palindrome? Yes, it is!
+```
+
   - Input `word` is not a palindrome
 
 ### What is the output from running the test suite with test coverage monitoring?
