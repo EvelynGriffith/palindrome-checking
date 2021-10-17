@@ -15,6 +15,7 @@ from palindromechecker.main import cli
 # Reference:
 # https://typer.tiangolo.com/tutorial/testing/
 
+
 def test_palindromechecker_recursive_is_palindrome():
     """Ensure that the command-line interface works for recursive approach."""
     result = runner.invoke(cli, ["--word", "civic", "--approach", "recursive"])
