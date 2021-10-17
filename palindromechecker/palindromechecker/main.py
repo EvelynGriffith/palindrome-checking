@@ -19,11 +19,13 @@ cli = typer.Typer()
 # --> "recursive": use the recursive approach described on page 129
 # --> "reverse": use the recursive approach described on page 164
 
+
 class PalindromeCheckingApproach(str, Enum):
     """Define the name for the approach for performing palindrome checking."""
 
     recursive = "recursive"
     reverse = "reverse"
+
 
 # implement a command-line interface using typer that produces
 # output like those examples included in the remainder of this file
@@ -52,6 +54,8 @@ def palindrome_one(
     console.print(
         f":satisfied: Is this word a palindrome? {util.human_readable_boolean(found_if_palindrome)}"
     )
+
+
 # poetry run palindromechecker --help
 
 # Usage: palindromechecker [OPTIONS]

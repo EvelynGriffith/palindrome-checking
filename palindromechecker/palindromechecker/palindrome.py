@@ -6,11 +6,13 @@
 
 # implement to_chars(word: str) -> str:
 """ Identifying & Checking that the letters in the palindrome are letters """
+
+
 def to_chars(s):
     s = s.lower()
-    letters = ''
+    letters = ""
     for c in s:
-        if c in 'abcdefghijklmnopqrstuvwxyz':
+        if c in "abcdefghijklmnopqrstuvwxyz":
             letters = letters + c
     return letters
 
@@ -24,6 +26,7 @@ def is_palindrome_recursive(s):
 
     # implement def is_palindrome(word: str) -> bool:
     """Determine whether or not word is palindrome"""
+
     def is_palindrome(s):
         if len(s) <= 1:
             return True

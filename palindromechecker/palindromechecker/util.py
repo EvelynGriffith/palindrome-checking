@@ -15,4 +15,3 @@ def human_readable_boolean(answer: bool) -> str:
         return "No, it is not!"
     else:
         return "Yes, it is!"
-
