@@ -8,9 +8,9 @@
 """ Identifying & Checking that the letters in the palindrome are letters """
 def to_chars(s):
     s = s.lower()
-    letters = ""
+    letters = ''
     for c in s:
-        if c in "abcdefghijklmnopqrstuvwxyz":
+        if c in 'abcdefghijklmnopqrstuvwxyz':
             letters = letters + c
     return letters
 
