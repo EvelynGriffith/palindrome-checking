@@ -1,7 +1,4 @@
 # Add the required docstring and any required imports of objects
-import typer
-
-from palindromechecker import __version__
 
 from palindromechecker import util
 from importlib import reload

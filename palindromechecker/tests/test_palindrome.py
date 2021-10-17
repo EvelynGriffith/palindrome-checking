@@ -1,7 +1,7 @@
 # Add the required docstring and any required imports of objects
 """Test case for palindrome file."""
 import typer
-from palindromechecker import __version__
+
 from palindromechecker import palindrome
 from typer.testing import CliRunner
 
