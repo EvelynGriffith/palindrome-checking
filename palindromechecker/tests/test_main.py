@@ -1,15 +1,12 @@
 # Add the required docstring and any required imports of objects
 """Test the functions in the main.py file."""
+from typer.testing import CliRunner
 
 import typer
 
 cli = typer.Typer()
 
-from typer.testing import CliRunner
-
 runner = CliRunner()
-
-from palindromechecker.main import cli
 
 # from palindromechecker import main
 # Reference:
