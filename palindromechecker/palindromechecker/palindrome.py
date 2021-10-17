@@ -38,7 +38,7 @@ def is_palindrome_recursive(s):
 # --> "reverse": use the recursive approach described on page 164
 def is_palindrome_reverse(s):
     """Assumes s is a str returns True if the str is a palindrome; False otherwise."""
-    x = to_chars(s).split(" ")
+    x = to_chars(s).split(' ')
     temp = x[:]
     temp.reverse()
     return temp == x
