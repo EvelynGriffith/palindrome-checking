@@ -3,6 +3,7 @@
 import typer
 
 from palindromechecker import palindrome
+
 from typer.testing import CliRunner
 
 runner = CliRunner()

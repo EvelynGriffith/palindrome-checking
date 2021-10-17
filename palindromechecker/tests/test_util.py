@@ -1,6 +1,7 @@
 # Add the required docstring and any required imports of objects
 
 from palindromechecker import util
+
 from importlib import reload
 
 reload(util)

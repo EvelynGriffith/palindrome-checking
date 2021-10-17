@@ -10,6 +10,7 @@ from enum import Enum
 from rich.console import Console
 
 from palindromechecker import palindrome
+
 from palindromechecker import util
 
 # create the command-line interface object with typer
@@ -44,7 +45,6 @@ def palindrome_one(
     elif approach.value == PalindromeCheckingApproach.reverse:
         found_if_palindrome = palindrome.is_palindrome_reverse(word)
 
-    found_if_palindrome = True
     console.print(f":Sparkles: Awesome. using the {approach} for palindrome checking!")
     console.print()
     console.print(
