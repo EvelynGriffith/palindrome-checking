@@ -6,12 +6,8 @@
 
 ### Use four fenced code blocks to provide output from four different runs of `palindromechecker` with different inputs
 
-TODO: Provide the complete command-line for your use of the `palindromechecker` program
-
-TODO: Provide the output for running `palindromechecker` in the following configurations:
-
 - Recursive:
-  - Input `word` is a palindrome
+- Input `word` is a palindrome
 
 ```
 ✨ Awesome. using the recursive for palindrome checking!
@@ -23,8 +19,16 @@ TODO: Provide the output for running `palindromechecker` in the following config
 
 - Input `word` is not a palindrome
 
+```
+✨ Awesome. using the recursive for palindrome checking!
+
+🔖 Going to check to see if the word taylor is a palindrome!
+
+😆 Is this word a palindrome? No, it is not!
+```
+
 - Reverse:
-  - Input `word` is a palindrome
+- Input `word` is a palindrome
 
 ```
 ✨ Awesome. using the reverse for palindrome checking!
@@ -34,13 +38,19 @@ TODO: Provide the output for running `palindromechecker` in the following config
 😆 Is this word a palindrome? Yes, it is!
 ```
 
-  - Input `word` is not a palindrome
+- Input `word` is not a palindrome
+
+```
+✨ Awesome. using the reverse for palindrome checking!
+
+🔖 Going to check to see if the word taylor is a palindrome!
+
+😆 Is this word a palindrome? No, it is not!
+```
 
 ### What is the output from running the test suite with test coverage monitoring?
 
-Provide the command that you used to run the coverage tracking for the test suite
-
-`poetry run task test`
+`poetry run task coverage`
 
 ```
 =================================================================== test session starts ===================================================================

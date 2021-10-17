@@ -12,6 +12,7 @@ from palindromechecker import __version__
 runner = CliRunner()
 
 from palindromechecker.main import cli
+
 # from palindromechecker import main
 # Reference:
 # https://typer.tiangolo.com/tutorial/testing/
