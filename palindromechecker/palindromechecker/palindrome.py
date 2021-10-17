@@ -7,6 +7,7 @@
 # implement to_chars(word: str) -> str:
 """ Identifying & Checking that the letters in the palindrome are letters """
 
+
 def to_chars(s):
     """Determine whether or not word is a palindrome."""
     s = s.lower()
