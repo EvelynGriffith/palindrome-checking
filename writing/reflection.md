@@ -59,8 +59,6 @@ This is the test case for the test_palindromechecker_recursive_is_palindrome fun
 
 #### An example of a test case for the `util` module of the `palindromechecker`
 
-TODO: Write at least one paragraph to explain the request source code
-
 ```
 def test_human_readable_boolean_true():
     """Ensure that a human-readable true boolean works correctly."""
@@ -73,8 +71,16 @@ This source code is an example of a test case for our util.py file. The function
 
 #### An example of a test case for the `palindrome` module of the `palindromechecker`
 
-TODO: Use a fenced code block to provide the requested source code
-TODO: Write at least one paragraph to explain the request source code
+```
+def test_short_palindrome_word_reverse():
+    """Ensure that a short word of "civic" works correctly."""
+    # implement this test case using the provided example
+    word = "civic"
+    result = palindrome.is_palindrome_reverse(word)
+    assert result is True
+```
+
+This test case is used to test the palindrome.py file functions. It will create a new variable called "word" and it will assing "civic" to that word then it will call upon the function with the input "civic". It will then assert that the function should produce True as it's answer and if it doesn't then we know that there is something wrong with the function.
 
 ## Professional Development
 
