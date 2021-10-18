@@ -135,5 +135,4 @@ The greatest challenge I faced while doing this assignment actually came up afte
 
 ### Leveraging your response to the previous question, how did you overcome the challenge?
 
-Provide a one-paragraph response that answers this question in your own words.
-Provide a response to this question that is different from any previous answers.
+To overcome this challenge I realized that I needed help from someone who had more knowlege than me. I ended up talking to a couple different TLs and eventually the solution that we came to was that in the reverse function we needed this line `x = [el for el in to_chars(s)]`. This line essentially.........
